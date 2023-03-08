@@ -9,7 +9,7 @@ public sealed partial class RandomSm64 : AbstractRandom<SplitMix64>, IEquatable<
     public static RandomSm64 Shared { get => _shared; }
 
     public static RandomSm64 Create(long preseed) =>
-        RandomSm64.Create(unchecked((long)SaltMaker.ValueToSalty(preseed)));
+        new RandomSm64(SplitMix64.Create(unchecked((long)SaltMaker.ValueToSalty(preseed))));
 
     public override AbstractRandom<SplitMix64> CreateFromCurrentState() => 
         new RandomSm64(_seed);
