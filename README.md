@@ -1,6 +1,6 @@
 # DeterRandom
 
-This library has multiple Random generators and made with mind of easy extension of additional generator types. 
+This library has multiple(2 at the moment) Random generators and made with mind of easy extension of additional generator types. 
 Generators xoshiro and SplitMix based on code written in 2019 by David Blackman and Sebastiano Vigna (vigna@acm.org) and released by them under [public domain](http://creativecommons.org/publicdomain/zero/1.0/)
 
 If you interested in their original work you can find it at https://prng.di.unimi.it
