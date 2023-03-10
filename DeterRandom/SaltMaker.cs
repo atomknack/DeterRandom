@@ -18,6 +18,17 @@ namespace DeterRandom
                 s1 = Rotl64(s1 ^ salt, saltShift);
             }
         }
+        internal static void SaltFourSameWay(ref ulong s0, ref ulong s1, ref ulong s2, ref ulong s3, ulong salt) //totally NOT scientifical method of salting
+        {
+            unchecked
+            {
+                int saltShift = (int)(salt % 59);
+                s0 = Rotl64(s0 ^ salt, saltShift);
+                s1 = Rotl64(s1 ^ salt, saltShift);
+                s2 = Rotl64(s2 ^ salt, saltShift);
+                s3 = Rotl64(s3 ^ salt, saltShift);
+            }
+        }
         public static ulong ValueToSalty(long value) =>
             ValueToSalty(unchecked((ulong)value));
         public static ulong ValueToSalty(ulong value)

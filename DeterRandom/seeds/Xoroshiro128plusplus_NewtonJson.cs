@@ -1,8 +1,6 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Concurrent;
-using System.Collections.Generic;
-using System.Text;
 
 namespace DeterRandom.Seeds;
 
@@ -10,16 +8,13 @@ namespace DeterRandom.Seeds;
 [JsonConverter(typeof(NewtonJson_Xoroshiro128plusplus))]
 public readonly partial struct Xoroshiro128plusplus
 {
-    //Thread safe implemenatation with pool(bag) for temp json objects
+    //Thread safe implemenatation with pool(bag) for temp json objects  
     [JsonObject(MemberSerialization = MemberSerialization.OptIn)]
-    //internal
-    private 
-        class NewtonJson_Xoroshiro128plusplus : JsonConverter<Xoroshiro128plusplus>
+    //change to internal if needed for testing 
+    private class NewtonJson_Xoroshiro128plusplus : JsonConverter<Xoroshiro128plusplus>
     {
         //to check that no memory leaks change this class and static field to internal and uncomment counter in AfterEveryTest() in test project.
-        //internal
-        private 
-            static readonly ConcurrentBag<NewtonJson_Xoroshiro128plusplus> s_pool = new ConcurrentBag<NewtonJson_Xoroshiro128plusplus>();
+        private static readonly ConcurrentBag<NewtonJson_Xoroshiro128plusplus> s_pool = new ConcurrentBag<NewtonJson_Xoroshiro128plusplus>();
         [JsonRequired]
         public long s0;
         [JsonRequired]
