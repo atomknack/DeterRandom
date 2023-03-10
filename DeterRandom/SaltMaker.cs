@@ -9,7 +9,14 @@ namespace DeterRandom
 {
     public static partial class SaltMaker
     {
-        internal static void SaltTwoSameWay(ref ulong s0, ref ulong s1, ulong salt) //totally NOT scientifical method of salting
+        internal static void SaltSplitMix64(ref ulong s0, ulong salt) //totally NOT scientifical method of salting
+        {
+            unchecked
+            {
+                s0 = s0 + ValueToSalty(s0);
+            }
+        }
+        internal static void SaltXoroshiro128plusplus(ref ulong s0, ref ulong s1, ulong salt) //totally NOT scientifical method of salting
         {
             unchecked
             {
@@ -18,7 +25,7 @@ namespace DeterRandom
                 s1 = Rotl64(s1 ^ salt, saltShift);
             }
         }
-        internal static void SaltFourSameWay(ref ulong s0, ref ulong s1, ref ulong s2, ref ulong s3, ulong salt) //totally NOT scientifical method of salting
+        internal static void SaltXoroshiro256ss(ref ulong s0, ref ulong s1, ref ulong s2, ref ulong s3, ulong salt) //totally NOT scientifical method of salting
         {
             unchecked
             {
