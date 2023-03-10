@@ -2,7 +2,7 @@
 
 namespace DeterRandom.Seeds;
 
-public readonly partial struct Xoroshiro128plusplus : IPseudoRandomSeed<Xoroshiro128plusplus> ,IEquatable<Xoroshiro128plusplus>
+public readonly partial struct Xoroshiro128plusplus
 {
     private readonly ulong _s0;
     private readonly ulong _s1;
@@ -24,8 +24,8 @@ public readonly partial struct Xoroshiro128plusplus : IPseudoRandomSeed<Xoroshir
         ulong s0 = _s0;
         ulong s1 = _s1;
 
-        SaltMaker.SaltTwoSameWay(ref s0, ref s1, SaltMaker.ValueToSalty(salt));
         NextSeed(ref s0, ref s1);
+        SaltMaker.SaltXoroshiro128plusplus(ref s0, ref s1, SaltMaker.ValueToSalty(salt));
         nextSeedPlaceholder = new Xoroshiro128plusplus(s0, s1);
     }
 
@@ -37,15 +37,6 @@ public readonly partial struct Xoroshiro128plusplus : IPseudoRandomSeed<Xoroshir
         nextSeedPlaceholder = new Xoroshiro128plusplus(s0, s1);
     }
 
-    public static void NextSeed(ref ulong s0, ref ulong s1)
-    {
-        unchecked
-        {
-            s1 = s1 ^ s0;
-            s0 = BitHelpers.Rotl64(s0, 49) ^ s1 ^ (s1 << 21);
-            s1 = BitHelpers.Rotl64(s1, 28);
-        }
-    }
 
     public Xoroshiro128plusplus CreateIdenticalCopy() => 
         new Xoroshiro128plusplus(_s0, _s1);

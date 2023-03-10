@@ -2,7 +2,7 @@
 
 namespace DeterRandom.Seeds;
 
-public readonly partial struct Xoroshiro256ss : IPseudoRandomSeed<Xoroshiro256ss> ,IEquatable<Xoroshiro256ss>
+public readonly partial struct Xoroshiro256ss
 {
     private readonly ulong _s0;
     private readonly ulong _s1;
@@ -35,16 +35,13 @@ public readonly partial struct Xoroshiro256ss : IPseudoRandomSeed<Xoroshiro256ss
     {
         unchecked
         {
-            ulong t = _s1 << 17;
-            ulong s2 = _s2 ^ _s0;
-            ulong s3 = _s3 ^ _s1;
-            ulong s1 = _s1 ^ s2;
-            ulong s0 = _s0 ^ s3;
+            ulong s0 = _s0;
+            ulong s1 = _s1;
+            ulong s2 = _s2;
+            ulong s3 = _s3;
 
-            s2 = _s2 ^ t;
-            s3 = BitHelpers.Rotl64(s3, 45);
-
-            SaltMaker.SaltFourSameWay(ref s0, ref s1, ref s2, ref s3, SaltMaker.ValueToSalty(salt));
+            NextSeed(ref s0, ref s1, ref s2, ref s3);
+            SaltMaker.SaltXoroshiro256ss(ref s0, ref s1, ref s2, ref s3, SaltMaker.ValueToSalty(salt));
             nextSeedPlaceholder = new Xoroshiro256ss(s0, s1, s2, s3);
         }
     }
@@ -53,16 +50,13 @@ public readonly partial struct Xoroshiro256ss : IPseudoRandomSeed<Xoroshiro256ss
     {
         unchecked
         {
-            ulong t = _s1 << 17;
-            ulong s2 = _s2 ^ _s0;
-            ulong s3 = _s3 ^ _s1;
-            ulong s1 = _s1 ^ s2;
-            ulong s0 = _s0 ^ s3;
+            ulong s0 = _s0;
+            ulong s1 = _s1;
+            ulong s2 = _s2;
+            ulong s3 = _s3;
 
-            s2 = _s2 ^ t;
-            s3 = BitHelpers.Rotl64(s3, 45);
-
-            //SaltMaker.SaltFourSameWay(ref s0, ref s1, ref s2, ref s3, SaltMaker.ValueToSalty(salt));
+            NextSeed(ref s0, ref s1, ref s2, ref s3);
+            //SaltMaker.SaltXoroshiro256ss(ref s0, ref s1, ref s2, ref s3, SaltMaker.ValueToSalty(salt));
             nextSeedPlaceholder = new Xoroshiro256ss(s0, s1, s2, s3);
         }
     }

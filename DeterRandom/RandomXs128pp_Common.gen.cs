@@ -10,7 +10,7 @@ using DeterRandom.Seeds;
 
 namespace DeterRandom;
 
-public sealed partial class RandomXs128pp : AbstractRandom<Xoroshiro128plusplus>, IEquatable<RandomXs128pp>
+public sealed partial class RandomXs128pp
 {
     private static readonly RandomXs128pp _shared = Create(42);
     public static RandomXs128pp Shared { get => _shared; }

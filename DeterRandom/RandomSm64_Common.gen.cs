@@ -10,7 +10,7 @@ using DeterRandom.Seeds;
 
 namespace DeterRandom;
 
-public sealed partial class RandomSm64 : AbstractRandom<SplitMix64>, IEquatable<RandomSm64>
+public sealed partial class RandomSm64
 {
     private static readonly RandomSm64 _shared = Create(42);
     public static RandomSm64 Shared { get => _shared; }
