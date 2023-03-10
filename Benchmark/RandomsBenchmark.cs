@@ -11,6 +11,7 @@ public class RandomsBenchmark
     private const int N = 10000;
 
     private readonly Random net = new Random(42);
+    private readonly RandomXs256ss xs256ss = RandomXs256ss.Create(42);
     private readonly RandomXs128pp xs128pp = RandomXs128pp.Create(42);
     private readonly RandomSm64 sm64 = RandomSm64.Create(42);
 
@@ -25,6 +26,8 @@ public class RandomsBenchmark
     }
     [Benchmark]
     public void BenchNetRandom() => NRandomNet();
+    [Benchmark]
+    public void BenchXs256ss() => NRandomXs256ss();
     [Benchmark]
     public void BenchXs128pp() => NRandomXs128pp();
     [Benchmark]
@@ -43,7 +46,19 @@ public class RandomsBenchmark
         }
         return result;
     }
-
+    public long NRandomXs256ss()
+    {
+        long result = 0;
+        for (int i = 0; i < N; i++)
+        {
+            int next = xs256ss.Next(1000);
+            unchecked
+            {
+                result += next;
+            }
+        }
+        return result;
+    }
     public long NRandomXs128pp()
     {
         long result = 0;
