@@ -1,0 +1,280 @@
+<Playlist Version="2.0">
+  <Rule Name="Includes" Match="Any">
+    <Rule Match="All">
+      <Property Name="Solution" />
+      <Rule Match="Any">
+        <Rule Match="All">
+          <Property Name="Project" Value="DeterRandomTests" />
+          <Rule Match="Any">
+            <Rule Match="All">
+              <Property Name="Namespace" Value="DeterRandomTests" />
+              <Rule Match="Any">
+                <Rule Match="All">
+                  <Property Name="Class" Value="BitHelpersTests" />
+                  <Rule Match="Any">
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="DeterRandomTests.BitHelpersTests.InclusiveMaskReturnOneInclusive" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="DeterRandomTests.BitHelpersTests.InclusiveMaskReturnOneInclusive" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="DeterRandomTests.BitHelpersTests.Rotl64_1by20" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="DeterRandomTests.BitHelpersTests.Rotl64_1by20" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="DeterRandomTests.BitHelpersTests.Rotl64_1by21" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="DeterRandomTests.BitHelpersTests.Rotl64_1by21" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="DeterRandomTests.BitHelpersTests.Rotl64_1by22" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="DeterRandomTests.BitHelpersTests.Rotl64_1by22" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="DeterRandomTests.BitHelpersTests.Rotl64_1by23" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="DeterRandomTests.BitHelpersTests.Rotl64_1by23" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="DeterRandomTests.BitHelpersTests.Rotl64_1by24" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="DeterRandomTests.BitHelpersTests.Rotl64_1by24" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="DeterRandomTests.BitHelpersTests.Rotl64_1by32" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="DeterRandomTests.BitHelpersTests.Rotl64_1by32" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="DeterRandomTests.BitHelpersTests.U48_MASK" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="DeterRandomTests.BitHelpersTests.U48_MASK" />
+                      </Rule>
+                    </Rule>
+                  </Rule>
+                </Rule>
+                <Rule Match="All">
+                  <Property Name="Class" Value="RandomXs128pp_JsonTests" />
+                  <Rule Match="Any">
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="DeterRandomTests.RandomXs128pp_JsonTests.CanDeserializeFromJson" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="DeterRandomTests.RandomXs128pp_JsonTests.CanDeserializeFromJson(preseed: 0)" />
+                        <Property Name="DisplayName" Value="DeterRandomTests.RandomXs128pp_JsonTests.CanDeserializeFromJson(preseed: 1)" />
+                        <Property Name="DisplayName" Value="DeterRandomTests.RandomXs128pp_JsonTests.CanDeserializeFromJson(preseed: 42)" />
+                        <Property Name="DisplayName" Value="DeterRandomTests.RandomXs128pp_JsonTests.CanDeserializeFromJson(preseed: 100)" />
+                        <Property Name="DisplayName" Value="DeterRandomTests.RandomXs128pp_JsonTests.CanDeserializeFromJson(preseed: -100)" />
+                        <Property Name="DisplayName" Value="DeterRandomTests.RandomXs128pp_JsonTests.CanDeserializeFromJson(preseed: 1000)" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="DeterRandomTests.RandomXs128pp_JsonTests.CanSerializeToJson" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="DeterRandomTests.RandomXs128pp_JsonTests.CanSerializeToJson(preseed: 0)" />
+                        <Property Name="DisplayName" Value="DeterRandomTests.RandomXs128pp_JsonTests.CanSerializeToJson(preseed: 1)" />
+                        <Property Name="DisplayName" Value="DeterRandomTests.RandomXs128pp_JsonTests.CanSerializeToJson(preseed: 42)" />
+                        <Property Name="DisplayName" Value="DeterRandomTests.RandomXs128pp_JsonTests.CanSerializeToJson(preseed: 100)" />
+                        <Property Name="DisplayName" Value="DeterRandomTests.RandomXs128pp_JsonTests.CanSerializeToJson(preseed: -100)" />
+                        <Property Name="DisplayName" Value="DeterRandomTests.RandomXs128pp_JsonTests.CanSerializeToJson(preseed: 1000)" />
+                      </Rule>
+                    </Rule>
+                  </Rule>
+                </Rule>
+                <Rule Match="All">
+                  <Property Name="Class" Value="RandomXs128pp_seed37_NextBytesTests" />
+                  <Rule Match="Any">
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="DeterRandomTests.RandomXs128pp_seed37_NextBytesTests.ArrayEqualSpan" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="DeterRandomTests.RandomXs128pp_seed37_NextBytesTests.ArrayEqualSpan(len: 0)" />
+                        <Property Name="DisplayName" Value="DeterRandomTests.RandomXs128pp_seed37_NextBytesTests.ArrayEqualSpan(len: 1)" />
+                        <Property Name="DisplayName" Value="DeterRandomTests.RandomXs128pp_seed37_NextBytesTests.ArrayEqualSpan(len: 10)" />
+                        <Property Name="DisplayName" Value="DeterRandomTests.RandomXs128pp_seed37_NextBytesTests.ArrayEqualSpan(len: 100)" />
+                        <Property Name="DisplayName" Value="DeterRandomTests.RandomXs128pp_seed37_NextBytesTests.ArrayEqualSpan(len: 255)" />
+                        <Property Name="DisplayName" Value="DeterRandomTests.RandomXs128pp_seed37_NextBytesTests.ArrayEqualSpan(len: 300)" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="DeterRandomTests.RandomXs128pp_seed37_NextBytesTests.CountOfDecreasing" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="DeterRandomTests.RandomXs128pp_seed37_NextBytesTests.CountOfDecreasing(len: 0, expectedCount: 0)" />
+                        <Property Name="DisplayName" Value="DeterRandomTests.RandomXs128pp_seed37_NextBytesTests.CountOfDecreasing(len: 1, expectedCount: 0)" />
+                        <Property Name="DisplayName" Value="DeterRandomTests.RandomXs128pp_seed37_NextBytesTests.CountOfDecreasing(len: 10, expectedCount: 3)" />
+                        <Property Name="DisplayName" Value="DeterRandomTests.RandomXs128pp_seed37_NextBytesTests.CountOfDecreasing(len: 100, expectedCount: 40)" />
+                        <Property Name="DisplayName" Value="DeterRandomTests.RandomXs128pp_seed37_NextBytesTests.CountOfDecreasing(len: 255, expectedCount: 120)" />
+                        <Property Name="DisplayName" Value="DeterRandomTests.RandomXs128pp_seed37_NextBytesTests.CountOfDecreasing(len: 300, expectedCount: 140)" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="DeterRandomTests.RandomXs128pp_seed37_NextBytesTests.CountOfIncreasing" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="DeterRandomTests.RandomXs128pp_seed37_NextBytesTests.CountOfIncreasing(len: 0, expectedCount: 0)" />
+                        <Property Name="DisplayName" Value="DeterRandomTests.RandomXs128pp_seed37_NextBytesTests.CountOfIncreasing(len: 1, expectedCount: 0)" />
+                        <Property Name="DisplayName" Value="DeterRandomTests.RandomXs128pp_seed37_NextBytesTests.CountOfIncreasing(len: 10, expectedCount: 3)" />
+                        <Property Name="DisplayName" Value="DeterRandomTests.RandomXs128pp_seed37_NextBytesTests.CountOfIncreasing(len: 100, expectedCount: 40)" />
+                        <Property Name="DisplayName" Value="DeterRandomTests.RandomXs128pp_seed37_NextBytesTests.CountOfIncreasing(len: 255, expectedCount: 120)" />
+                        <Property Name="DisplayName" Value="DeterRandomTests.RandomXs128pp_seed37_NextBytesTests.CountOfIncreasing(len: 300, expectedCount: 140)" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="DeterRandomTests.RandomXs128pp_seed37_NextBytesTests.DistinctNextBytes" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="DeterRandomTests.RandomXs128pp_seed37_NextBytesTests.DistinctNextBytes(len: 0, expectedDistinctLen: 0)" />
+                        <Property Name="DisplayName" Value="DeterRandomTests.RandomXs128pp_seed37_NextBytesTests.DistinctNextBytes(len: 1, expectedDistinctLen: 1)" />
+                        <Property Name="DisplayName" Value="DeterRandomTests.RandomXs128pp_seed37_NextBytesTests.DistinctNextBytes(len: 10, expectedDistinctLen: 9)" />
+                        <Property Name="DisplayName" Value="DeterRandomTests.RandomXs128pp_seed37_NextBytesTests.DistinctNextBytes(len: 100, expectedDistinctLen: 80)" />
+                        <Property Name="DisplayName" Value="DeterRandomTests.RandomXs128pp_seed37_NextBytesTests.DistinctNextBytes(len: 255, expectedDistinctLen: 160)" />
+                        <Property Name="DisplayName" Value="DeterRandomTests.RandomXs128pp_seed37_NextBytesTests.DistinctNextBytes(len: 300, expectedDistinctLen: 175)" />
+                      </Rule>
+                    </Rule>
+                  </Rule>
+                </Rule>
+                <Rule Match="All">
+                  <Property Name="Class" Value="RandomXs128pp_seed37_NextDoubleTests" />
+                  <Rule Match="Any">
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="DeterRandomTests.RandomXs128pp_seed37_NextDoubleTests.CountOfDecreasing" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="DeterRandomTests.RandomXs128pp_seed37_NextDoubleTests.CountOfDecreasing(len: 0, expectedCount: 0)" />
+                        <Property Name="DisplayName" Value="DeterRandomTests.RandomXs128pp_seed37_NextDoubleTests.CountOfDecreasing(len: 1, expectedCount: 0)" />
+                        <Property Name="DisplayName" Value="DeterRandomTests.RandomXs128pp_seed37_NextDoubleTests.CountOfDecreasing(len: 10, expectedCount: 3)" />
+                        <Property Name="DisplayName" Value="DeterRandomTests.RandomXs128pp_seed37_NextDoubleTests.CountOfDecreasing(len: 100, expectedCount: 40)" />
+                        <Property Name="DisplayName" Value="DeterRandomTests.RandomXs128pp_seed37_NextDoubleTests.CountOfDecreasing(len: 255, expectedCount: 120)" />
+                        <Property Name="DisplayName" Value="DeterRandomTests.RandomXs128pp_seed37_NextDoubleTests.CountOfDecreasing(len: 300, expectedCount: 139)" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="DeterRandomTests.RandomXs128pp_seed37_NextDoubleTests.CountOfIncreasing" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="DeterRandomTests.RandomXs128pp_seed37_NextDoubleTests.CountOfIncreasing(len: 0, expectedCount: 0)" />
+                        <Property Name="DisplayName" Value="DeterRandomTests.RandomXs128pp_seed37_NextDoubleTests.CountOfIncreasing(len: 1, expectedCount: 0)" />
+                        <Property Name="DisplayName" Value="DeterRandomTests.RandomXs128pp_seed37_NextDoubleTests.CountOfIncreasing(len: 10, expectedCount: 3)" />
+                        <Property Name="DisplayName" Value="DeterRandomTests.RandomXs128pp_seed37_NextDoubleTests.CountOfIncreasing(len: 100, expectedCount: 40)" />
+                        <Property Name="DisplayName" Value="DeterRandomTests.RandomXs128pp_seed37_NextDoubleTests.CountOfIncreasing(len: 255, expectedCount: 120)" />
+                        <Property Name="DisplayName" Value="DeterRandomTests.RandomXs128pp_seed37_NextDoubleTests.CountOfIncreasing(len: 300, expectedCount: 140)" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="DeterRandomTests.RandomXs128pp_seed37_NextDoubleTests.NextRandom" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="DeterRandomTests.RandomXs128pp_seed37_NextDoubleTests.NextRandom(len: 10)" />
+                        <Property Name="DisplayName" Value="DeterRandomTests.RandomXs128pp_seed37_NextDoubleTests.NextRandom(len: 100)" />
+                        <Property Name="DisplayName" Value="DeterRandomTests.RandomXs128pp_seed37_NextDoubleTests.NextRandom(len: 1000)" />
+                      </Rule>
+                    </Rule>
+                  </Rule>
+                </Rule>
+                <Rule Match="All">
+                  <Property Name="Class" Value="RandomXs128pp_seed37_NextIntTests" />
+                  <Rule Match="Any">
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="DeterRandomTests.RandomXs128pp_seed37_NextIntTests.NextIntFor_0_0" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="DeterRandomTests.RandomXs128pp_seed37_NextIntTests.NextIntFor_0_0" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="DeterRandomTests.RandomXs128pp_seed37_NextIntTests.NextIntNotEmptyInterval1000Times" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="DeterRandomTests.RandomXs128pp_seed37_NextIntTests.NextIntNotEmptyInterval1000Times(minInclusive: 0, maxExclusive: 10)" />
+                        <Property Name="DisplayName" Value="DeterRandomTests.RandomXs128pp_seed37_NextIntTests.NextIntNotEmptyInterval1000Times(minInclusive: 0, maxExclusive: 100)" />
+                        <Property Name="DisplayName" Value="DeterRandomTests.RandomXs128pp_seed37_NextIntTests.NextIntNotEmptyInterval1000Times(minInclusive: -10, maxExclusive: 10)" />
+                        <Property Name="DisplayName" Value="DeterRandomTests.RandomXs128pp_seed37_NextIntTests.NextIntNotEmptyInterval1000Times(minInclusive: -20, maxExclusive: 3)" />
+                        <Property Name="DisplayName" Value="DeterRandomTests.RandomXs128pp_seed37_NextIntTests.NextIntNotEmptyInterval1000Times(minInclusive: -20, maxExclusive: 20)" />
+                      </Rule>
+                    </Rule>
+                  </Rule>
+                </Rule>
+                <Rule Match="All">
+                  <Property Name="Class" Value="RandomXs128pp_seed37_NextSingleTests" />
+                  <Rule Match="Any">
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="DeterRandomTests.RandomXs128pp_seed37_NextSingleTests.CountOfDecreasing" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="DeterRandomTests.RandomXs128pp_seed37_NextSingleTests.CountOfDecreasing(len: 0, expectedCount: 0)" />
+                        <Property Name="DisplayName" Value="DeterRandomTests.RandomXs128pp_seed37_NextSingleTests.CountOfDecreasing(len: 1, expectedCount: 0)" />
+                        <Property Name="DisplayName" Value="DeterRandomTests.RandomXs128pp_seed37_NextSingleTests.CountOfDecreasing(len: 10, expectedCount: 3)" />
+                        <Property Name="DisplayName" Value="DeterRandomTests.RandomXs128pp_seed37_NextSingleTests.CountOfDecreasing(len: 100, expectedCount: 40)" />
+                        <Property Name="DisplayName" Value="DeterRandomTests.RandomXs128pp_seed37_NextSingleTests.CountOfDecreasing(len: 255, expectedCount: 120)" />
+                        <Property Name="DisplayName" Value="DeterRandomTests.RandomXs128pp_seed37_NextSingleTests.CountOfDecreasing(len: 300, expectedCount: 139)" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="DeterRandomTests.RandomXs128pp_seed37_NextSingleTests.CountOfIncreasing" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="DeterRandomTests.RandomXs128pp_seed37_NextSingleTests.CountOfIncreasing(len: 0, expectedCount: 0)" />
+                        <Property Name="DisplayName" Value="DeterRandomTests.RandomXs128pp_seed37_NextSingleTests.CountOfIncreasing(len: 1, expectedCount: 0)" />
+                        <Property Name="DisplayName" Value="DeterRandomTests.RandomXs128pp_seed37_NextSingleTests.CountOfIncreasing(len: 10, expectedCount: 3)" />
+                        <Property Name="DisplayName" Value="DeterRandomTests.RandomXs128pp_seed37_NextSingleTests.CountOfIncreasing(len: 100, expectedCount: 40)" />
+                        <Property Name="DisplayName" Value="DeterRandomTests.RandomXs128pp_seed37_NextSingleTests.CountOfIncreasing(len: 255, expectedCount: 120)" />
+                        <Property Name="DisplayName" Value="DeterRandomTests.RandomXs128pp_seed37_NextSingleTests.CountOfIncreasing(len: 300, expectedCount: 140)" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="DeterRandomTests.RandomXs128pp_seed37_NextSingleTests.NextRandom" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="DeterRandomTests.RandomXs128pp_seed37_NextSingleTests.NextRandom(len: 10)" />
+                        <Property Name="DisplayName" Value="DeterRandomTests.RandomXs128pp_seed37_NextSingleTests.NextRandom(len: 100)" />
+                        <Property Name="DisplayName" Value="DeterRandomTests.RandomXs128pp_seed37_NextSingleTests.NextRandom(len: 1000)" />
+                      </Rule>
+                    </Rule>
+                  </Rule>
+                </Rule>
+                <Rule Match="All">
+                  <Property Name="Class" Value="SimpleCreations" />
+                  <Rule Match="Any">
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="DeterRandomTests.SimpleCreations.CreateFromExported" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="DeterRandomTests.SimpleCreations.CreateFromExported(seed: 0)" />
+                        <Property Name="DisplayName" Value="DeterRandomTests.SimpleCreations.CreateFromExported(seed: 10)" />
+                        <Property Name="DisplayName" Value="DeterRandomTests.SimpleCreations.CreateFromExported(seed: 42)" />
+                        <Property Name="DisplayName" Value="DeterRandomTests.SimpleCreations.CreateFromExported(seed: 500)" />
+                      </Rule>
+                    </Rule>
+                  </Rule>
+                </Rule>
+                <Rule Match="All">
+                  <Property Name="Class" Value="Xoroshiro128ppSeeds" />
+                  <Rule Match="Any">
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="DeterRandomTests.Xoroshiro128ppSeeds.CanDeserializeFromJson" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="DeterRandomTests.Xoroshiro128ppSeeds.CanDeserializeFromJson(preseed: 0)" />
+                        <Property Name="DisplayName" Value="DeterRandomTests.Xoroshiro128ppSeeds.CanDeserializeFromJson(preseed: 1)" />
+                        <Property Name="DisplayName" Value="DeterRandomTests.Xoroshiro128ppSeeds.CanDeserializeFromJson(preseed: 42)" />
+                        <Property Name="DisplayName" Value="DeterRandomTests.Xoroshiro128ppSeeds.CanDeserializeFromJson(preseed: 100)" />
+                        <Property Name="DisplayName" Value="DeterRandomTests.Xoroshiro128ppSeeds.CanDeserializeFromJson(preseed: -100)" />
+                        <Property Name="DisplayName" Value="DeterRandomTests.Xoroshiro128ppSeeds.CanDeserializeFromJson(preseed: 1000)" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="DeterRandomTests.Xoroshiro128ppSeeds.CanSerializeToJson" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="DeterRandomTests.Xoroshiro128ppSeeds.CanSerializeToJson(preseed: 0)" />
+                        <Property Name="DisplayName" Value="DeterRandomTests.Xoroshiro128ppSeeds.CanSerializeToJson(preseed: 1)" />
+                        <Property Name="DisplayName" Value="DeterRandomTests.Xoroshiro128ppSeeds.CanSerializeToJson(preseed: 42)" />
+                        <Property Name="DisplayName" Value="DeterRandomTests.Xoroshiro128ppSeeds.CanSerializeToJson(preseed: 100)" />
+                        <Property Name="DisplayName" Value="DeterRandomTests.Xoroshiro128ppSeeds.CanSerializeToJson(preseed: -100)" />
+                        <Property Name="DisplayName" Value="DeterRandomTests.Xoroshiro128ppSeeds.CanSerializeToJson(preseed: 1000)" />
+                      </Rule>
+                    </Rule>
+                  </Rule>
+                </Rule>
+              </Rule>
+            </Rule>
+          </Rule>
+        </Rule>
+      </Rule>
+    </Rule>
+  </Rule>
+</Playlist>
