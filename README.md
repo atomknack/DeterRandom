@@ -10,5 +10,6 @@ This library has additional features compared to Random from standard Net:
 2) Make a new generator from existing one, that will use current state as an initial
 3) You also can make a new generator by salting existing one.
 4) Salting algorithms here is made by me and I can NOT say that they are having any mathematical base whatsoever, but probably fine :)
-5) All generators in this library can be Serialized and Deserialized from Json by using Newtonsoft.Json
+5) All generators in this library can be Serialized and Deserialized from Json by using Newtonsoft.Json (in progress)
 6) Json serialization support made in files with the corresponding name ending, and therefore can be easily removed if you don't need it.
+7) ulong to random in range can be less good quality than standard net realization - not so uniform, because use of % operator.
