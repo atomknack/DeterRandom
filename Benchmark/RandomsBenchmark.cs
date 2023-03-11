@@ -24,6 +24,7 @@ public class RandomsBenchmark
             k += i;
         }
     }
+
     [Benchmark]
     public void BenchNetRandom() => NRandomNet();
     [Benchmark]
