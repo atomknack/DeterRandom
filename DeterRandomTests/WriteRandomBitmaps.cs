@@ -1,5 +1,4 @@
 ﻿using DeterRandom;
-using System.ComponentModel;
 using System.Drawing;
 
 namespace DeterRandomTests;

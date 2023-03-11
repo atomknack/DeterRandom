@@ -1,5 +1,4 @@
 using FluentAssertions;
-using DeterRandom;
 using DeterRandom.Seeds;
 
 namespace DeterRandomTests;
