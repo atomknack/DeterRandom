@@ -44,6 +44,7 @@ public abstract partial class AbstractRandom<T>: IRandom where T : IPseudoRandom
     public void Shuffle<S>(Span<S> values) =>
         PrivateStatic.Shuffle(ref _seed, values);
 
+    public void Reset() => ResetToInitialState();
     public void ResetToInitialState() =>
         _seed = _initialSeed.CreateIdenticalCopy();
 
@@ -51,6 +52,8 @@ public abstract partial class AbstractRandom<T>: IRandom where T : IPseudoRandom
     {
         _seed.NextSaltedSeed(out _seed, salt);
     }
+
+
 
     public AbstractRandom(T seed): this(seed, seed.CreateIdenticalCopy()) { }
     public AbstractRandom(T initial, T current)

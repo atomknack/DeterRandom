@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Security.Cryptography;
 
 namespace DeterRandom;
 
 public partial interface IRandom
 {
+    public void Reset();
     void Salt(ulong salt);
     int Next();
     int Next(int maxValue);
@@ -19,5 +21,6 @@ public partial interface IRandom
     void Shuffle<TItem>(Span<TItem> values);
     public uint NextUInt32();
     public ulong NextUInt64();
+
 
 }
