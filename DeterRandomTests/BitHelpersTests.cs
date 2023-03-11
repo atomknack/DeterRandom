@@ -8,6 +8,17 @@ namespace DeterRandomTests;
 public class BitHelpersTests
 {
     [Fact]
+    public void MultiplyUncheckedUlong()
+    {
+        unchecked
+        {
+            ulong mm1 = ulong.MaxValue;
+            ulong result = mm1 * 10;
+            result.Should().Be(ulong.MaxValue - 9);
+        }
+    }
+
+    [Fact]
     public void U48_MASK()
     {
         BitHelpers.U48_MASK.Should().Be(0x00_00_FF_FF_FF_FF_FF_FF);

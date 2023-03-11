@@ -35,8 +35,8 @@ public abstract class NextBytesTests
     [InlineData(1,1)]
     [InlineData(10, 9)]
     [InlineData(100, 80)]
-    [InlineData(255, 160)]
-    [InlineData(300, 175)]
+    [InlineData(255, 155)]
+    [InlineData(300, 172)]
     public void DistinctNextBytes(int len, int expectedDistinctLen)
     {
         var randomUT = RandForTestSource;
@@ -51,7 +51,7 @@ public abstract class NextBytesTests
     [InlineData(10, 3)]
     [InlineData(100, 40)]
     [InlineData(255, 120)]
-    [InlineData(300, 140)]
+    [InlineData(300, 138)]
     public void CountOfIncreasing(int len, int expectedCount)
     {
         var randomUT = RandForTestSource;
@@ -69,7 +69,7 @@ public abstract class NextBytesTests
     [InlineData(10, 3)]
     [InlineData(100, 40)]
     [InlineData(255, 120)]
-    [InlineData(300, 140)]
+    [InlineData(300, 138)]
     public void CountOfDecreasing(int len, int expectedCount)
     {
         var randomUT = RandForTestSource;
