@@ -25,7 +25,7 @@ public class RandomXs256ss_seed37_NextBytesTests : NextBytesTests
     protected override IRandom RandForTestSource => RandomXs256ss.Create(37);
 }
 
-/*
+
 public class RandomXs256ss_JsonTests : JsonTests<RandomXs256ss>
 {
     public override string FolderName => "RandomXs256ss";
@@ -34,7 +34,7 @@ public class RandomXs256ss_JsonTests : JsonTests<RandomXs256ss>
     {
     }
 }
-*/
+
 
 
 public class RandomXs256ss_seed37_WriteRandomBitmaps : WriteRandomBitmaps

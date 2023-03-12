@@ -9,7 +9,7 @@ using Xunit.Abstractions;
 
 namespace DeterRandomTests;
 
-public class Xoroshiro128ppSeeds : JsonTests<Xoroshiro128plusplus>
+public class Xoroshiro128ppSeeds : JsonTests<Xoroshiro128pp>
 {
     private ITestOutputHelper _output;
 
@@ -17,7 +17,7 @@ public class Xoroshiro128ppSeeds : JsonTests<Xoroshiro128plusplus>
     {
         _output = output;
     }
-    public override string FolderName => "Xoroshiro128ppSeeds";
+    public override string FolderName => nameof(Xoroshiro128ppSeeds);
 
     protected override void AfterEveryTest()
     {
