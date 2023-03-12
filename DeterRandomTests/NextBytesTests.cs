@@ -1,5 +1,4 @@
-﻿using CollectionLike.Pooled;
-using DeterRandom;
+﻿using DeterRandom;
 using FluentAssertions;
 
 namespace DeterRandomTests;
