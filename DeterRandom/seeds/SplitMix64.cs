@@ -17,7 +17,7 @@ public readonly partial struct SplitMix64 : IPseudoRandomSeed<SplitMix64>, IEqua
     public static SplitMix64 CreateWithAdditionalOffset(SplitMix64 seed, ulong offset) =>
         new SplitMix64(unchecked(seed._s0 + offset));
 
-    public ulong CurrentPseudoRandom() => PseudoRandom(_s0);
+    public ulong CurrentPseudoRandomNoSeedChange() => PseudoRandom(_s0);
 
     public ulong ExportSeedAsUlong() => _s0;
     public long ExportSeedAsLong() => unchecked((long)_s0);

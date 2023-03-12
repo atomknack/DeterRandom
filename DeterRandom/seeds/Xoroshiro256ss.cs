@@ -16,7 +16,7 @@ public readonly partial struct Xoroshiro256ss : IPseudoRandomSeed<Xoroshiro256ss
         }
     }
 
-    public ulong CurrentPseudoRandom()
+    public ulong CurrentPseudoRandomNoSeedChange()
     {
         unchecked
         {

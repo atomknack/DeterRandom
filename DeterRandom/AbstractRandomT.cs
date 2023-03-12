@@ -26,15 +26,15 @@ public abstract partial class AbstractRandom<T>: IRandom where T : IPseudoRandom
         PrivateStatic.NextBytes(ref _seed, bytes);
 
     public uint NextUInt32() =>
-        (uint)(PrivateStatic.NextPseudo(ref _seed) >> 32);
+        (uint)(_seed.CurrentPseudoNextSeed(out _seed) >> 32);
     public ulong NextUInt64() =>
-        PrivateStatic.NextPseudo(ref _seed);
+        _seed.CurrentPseudoNextSeed(out _seed);
     public float NextSingle() =>
-        BitHelpers.LossyConversionToFloat(PrivateStatic.NextPseudo(ref _seed));
+        BitHelpers.LossyConversionToFloat(_seed.CurrentPseudoNextSeed(out _seed));
     public double NextDouble() =>
-        BitHelpers.LossyConversionToDouble(PrivateStatic.NextPseudo(ref _seed));
+        BitHelpers.LossyConversionToDouble(_seed.CurrentPseudoNextSeed(out _seed));
     public double NextDoubleInclusive() =>
-        BitHelpers.LossyConversionToDoubleInclusive(PrivateStatic.NextPseudo(ref _seed));
+        BitHelpers.LossyConversionToDoubleInclusive(_seed.CurrentPseudoNextSeed(out _seed));
     //BitHelpers.NextDouble(ref _seed);
 
     [Obsolete]

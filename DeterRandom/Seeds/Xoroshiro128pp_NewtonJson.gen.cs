@@ -11,29 +11,29 @@ using System.Collections.Concurrent;
 
 namespace DeterRandom.Seeds;
 
-[JsonConverter(typeof(NewtonJson_Xoroshiro128plusplus))]
-public readonly partial struct Xoroshiro128plusplus
+[JsonConverter(typeof(NewtonJson_Xoroshiro128pp))]
+public readonly partial struct Xoroshiro128pp
 {
     //Thread safe implemenatation with pool(bag) for temp json objects  
     [JsonObject(MemberSerialization = MemberSerialization.OptIn)]
     //change to internal if needed for testing 
-    private class NewtonJson_Xoroshiro128plusplus : JsonConverter<Xoroshiro128plusplus>
+    private class NewtonJson_Xoroshiro128pp : JsonConverter<Xoroshiro128pp>
     {
         //to check that no memory leaks change this class and static field to internal and uncomment counter in AfterEveryTest() in test project.
-        private static readonly ConcurrentBag<NewtonJson_Xoroshiro128plusplus> s_pool = new ConcurrentBag<NewtonJson_Xoroshiro128plusplus>();
+        private static readonly ConcurrentBag<NewtonJson_Xoroshiro128pp> s_pool = new ConcurrentBag<NewtonJson_Xoroshiro128pp>();
         
         [JsonRequired]
         public long s0;
         [JsonRequired]
         public long s1;
 
-        private static NewtonJson_Xoroshiro128plusplus FromPool() =>
-            s_pool.TryTake(out NewtonJson_Xoroshiro128plusplus o) ? o : new NewtonJson_Xoroshiro128plusplus();
-        private static void ReturnToPool(NewtonJson_Xoroshiro128plusplus o) => 
+        private static NewtonJson_Xoroshiro128pp FromPool() =>
+            s_pool.TryTake(out NewtonJson_Xoroshiro128pp o) ? o : new NewtonJson_Xoroshiro128pp();
+        private static void ReturnToPool(NewtonJson_Xoroshiro128pp o) => 
             s_pool.Add(o);
-        public override void WriteJson(JsonWriter writer, Xoroshiro128plusplus value, JsonSerializer serializer)
+        public override void WriteJson(JsonWriter writer, Xoroshiro128pp value, JsonSerializer serializer)
         {
-            NewtonJson_Xoroshiro128plusplus o = FromPool();
+            NewtonJson_Xoroshiro128pp o = FromPool();
             unchecked
             {
                 o.s0 = (long)value._s0;
@@ -44,12 +44,12 @@ public readonly partial struct Xoroshiro128plusplus
             ReturnToPool(o);
         }
 
-        public override Xoroshiro128plusplus ReadJson(JsonReader reader, Type objectType, Xoroshiro128plusplus existingValue, bool hasExistingValue, JsonSerializer serializer)
+        public override Xoroshiro128pp ReadJson(JsonReader reader, Type objectType, Xoroshiro128pp existingValue, bool hasExistingValue, JsonSerializer serializer)
         {
-            //NewtonJson_Xoroshiro128plusplus o = serializer.Deserialize<NewtonJson_Xoroshiro128plusplus>(reader);
-            NewtonJson_Xoroshiro128plusplus o = FromPool();
+            //NewtonJson_Xoroshiro128pp o = serializer.Deserialize<NewtonJson_Xoroshiro128pp>(reader);
+            NewtonJson_Xoroshiro128pp o = FromPool();
             serializer.Populate(reader, o);
-            Xoroshiro128plusplus result = unchecked(new Xoroshiro128plusplus((ulong)o.s0, (ulong)o.s1));
+            Xoroshiro128pp result = unchecked(new Xoroshiro128pp((ulong)o.s0, (ulong)o.s1));
             ReturnToPool(o);
             return result;
         }

@@ -13,10 +13,10 @@ namespace DeterRandom
         {
             unchecked
             {
-                s0 = s0 + ValueToSalty(s0);
+                s0 = s0 + ValueToSalty(salt);
             }
         }
-        internal static void SaltXoroshiro128plusplus(ref ulong s0, ref ulong s1, ulong salt) //totally NOT scientifical method of salting
+        internal static void SaltXoroshiro128pp(ref ulong s0, ref ulong s1, ulong salt) //totally NOT scientifical method of salting
         {
             unchecked
             {

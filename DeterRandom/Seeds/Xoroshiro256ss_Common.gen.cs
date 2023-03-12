@@ -16,6 +16,13 @@ public readonly partial struct Xoroshiro256ss
     private readonly ulong _s2;
     private readonly ulong _s3;
 
+    public ulong CurrentPseudoNextSeed(out Xoroshiro256ss nextSeedPlaceholder)
+    {
+        ulong result = CurrentPseudoRandomNoSeedChange();
+        NextSeed(out nextSeedPlaceholder);
+        return result;
+    }
+
     public void NextSaltedSeed(out Xoroshiro256ss nextSeedPlaceholder, ulong salt)
     {
         ulong s0 = _s0;

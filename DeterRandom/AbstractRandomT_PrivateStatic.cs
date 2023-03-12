@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using DeterRandom.Seeds;
 
 namespace DeterRandom;
 
@@ -10,7 +11,7 @@ public partial class AbstractRandom<T>
     {
         internal static int NextInt32<S>(ref S seed) where S : IPseudoRandomSeed<S>
         {
-            return BitHelpers.LossyConversionToInt32(NextPseudo(ref seed));
+            return BitHelpers.LossyConversionToInt32(seed.CurrentPseudoNextSeed(out seed));
         }
 
         [Obsolete("Not tested")]
@@ -18,25 +19,26 @@ public partial class AbstractRandom<T>
         {
             //if (minValue > maxValue)
             Guard.ThrowIfMinBiggerThanMax(minValue, maxValue);
-            ulong pseudo = NextPseudo(ref seed);
+            ulong pseudo = seed.CurrentPseudoNextSeed(out seed);
             ulong diff = (ulong)(maxValue - minValue);
             if (diff < 2)
                 return minValue;
             int result = (int)(pseudo % diff);
             return result + minValue;
         }
-
+        /*
         internal static ulong NextPseudo<S>(ref S seed) where S : IPseudoRandomSeed<S>
         {
             ulong result = seed.CurrentPseudoRandom();
             seed.NextSeed(out seed);
             return result;
         }
+        */
         internal static void NextBytes<S>(ref S seed, Span<byte> bytes) where S : IPseudoRandomSeed<S>
         {
             for (int i = 0; i < bytes.Length; ++i)
             {
-                ulong pseudo = NextPseudo(ref seed);
+                ulong pseudo = seed.CurrentPseudoNextSeed(out seed);
                 bytes[i] = (byte)(pseudo & BitHelpers.BYTE_MASK);
             }
         }

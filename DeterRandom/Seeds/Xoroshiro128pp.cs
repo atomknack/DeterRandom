@@ -4,12 +4,12 @@ using System.Text;
 
 namespace DeterRandom.Seeds;
 
-public readonly partial struct Xoroshiro128plusplus : IPseudoRandomSeed<Xoroshiro128plusplus>, IEquatable<Xoroshiro128plusplus>
+public readonly partial struct Xoroshiro128pp : IPseudoRandomSeed<Xoroshiro128pp>, IEquatable<Xoroshiro128pp>
 {
-    public static Xoroshiro128plusplus Create(long preSeed) =>
-        unchecked(new Xoroshiro128plusplus(SplitMix64.NextSeed((ulong)preSeed), SplitMix64.PseudoRandom((ulong)preSeed)));
+    public static Xoroshiro128pp Create(long preSeed) =>
+        unchecked(new Xoroshiro128pp(SplitMix64.NextSeed((ulong)preSeed), SplitMix64.PseudoRandom((ulong)preSeed)));
 
-    public ulong CurrentPseudoRandom()
+    public ulong CurrentPseudoRandomNoSeedChange()
     {
         unchecked
         {

@@ -13,6 +13,13 @@ public readonly partial struct SplitMix64
 {
     private readonly ulong _s0;
 
+    public ulong CurrentPseudoNextSeed(out SplitMix64 nextSeedPlaceholder)
+    {
+        ulong result = CurrentPseudoRandomNoSeedChange();
+        NextSeed(out nextSeedPlaceholder);
+        return result;
+    }
+
     public void NextSaltedSeed(out SplitMix64 nextSeedPlaceholder, ulong salt)
     {
         ulong s0 = _s0;

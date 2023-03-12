@@ -23,9 +23,9 @@ public sealed partial class RandomXs128pp
         //to check that no memory leaks change this class and static field to internal and uncomment counter in AfterEveryTest() in test project.
         private static readonly ConcurrentBag<NewtonJson_RandomXs128pp> s_pool = new ConcurrentBag<NewtonJson_RandomXs128pp>();
         [JsonRequired]
-        public Xoroshiro128plusplus initialSeed;
+        public Xoroshiro128pp initialSeed;
         [JsonProperty(Required = Required.Default)]
-        public Xoroshiro128plusplus? current;
+        public Xoroshiro128pp? current;
         private static NewtonJson_RandomXs128pp FromPool()
         {
             NewtonJson_RandomXs128pp o;
