@@ -24,7 +24,7 @@ public readonly partial struct SplitMix64
     {
         ulong s0 = _s0;
         NextSeed(ref s0);
-        SaltMaker.SaltSplitMix64(ref s0, SaltMaker.ValueToSalty(salt));
+        Salt(ref s0, SaltMaker.ValueToSalty(salt));
         nextSeedPlaceholder = new SplitMix64(s0);
     }
 
@@ -32,7 +32,7 @@ public readonly partial struct SplitMix64
     {
             ulong s0 = _s0;
         NextSeed(ref s0);
-        //SaltMaker.SaltSplitMix64(ref s0, SaltMaker.ValueToSalty(salt));
+        //Salt(ref s0, SaltMaker.ValueToSalty(salt));
         nextSeedPlaceholder = new SplitMix64(s0);
     }
 

@@ -38,5 +38,16 @@ public readonly partial struct Xoroshiro256ss : IPseudoRandomSeed<Xoroshiro256ss
             s3 = BitHelpers.Rotl64(s3, 45);
         }
     }
+    internal static void Salt(ref ulong s0, ref ulong s1, ref ulong s2, ref ulong s3, ulong salt) //totally NOT scientifical method of salting
+    {
+        unchecked
+        {
+            int saltShift = (int)(salt % 59);
+            s0 = BitHelpers.Rotl64(s0 ^ salt, saltShift);
+            s1 = BitHelpers.Rotl64(s1 ^ salt, saltShift);
+            s2 = BitHelpers.Rotl64(s2 ^ salt, saltShift);
+            s3 = BitHelpers.Rotl64(s3 ^ salt, saltShift);
+        }
+    }
 
 }

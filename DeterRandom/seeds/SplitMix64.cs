@@ -46,4 +46,11 @@ public readonly partial struct SplitMix64 : IPseudoRandomSeed<SplitMix64>, IEqua
             return z ^ (z >> 31);
         }
     }
+    internal static void Salt(ref ulong s0, ulong salt) //totally NOT scientifical method of salting
+    {
+        unchecked
+        {
+            s0 = s0 + SaltMaker.ValueToSalty(salt);
+        }
+    }
 }

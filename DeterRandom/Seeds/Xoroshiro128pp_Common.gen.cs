@@ -26,7 +26,7 @@ public readonly partial struct Xoroshiro128pp
         ulong s0 = _s0;
         ulong s1 = _s1;
         NextSeed(ref s0, ref s1);
-        SaltMaker.SaltXoroshiro128pp(ref s0, ref s1, SaltMaker.ValueToSalty(salt));
+        Salt(ref s0, ref s1, SaltMaker.ValueToSalty(salt));
         nextSeedPlaceholder = new Xoroshiro128pp(s0, s1);
     }
 
@@ -35,7 +35,7 @@ public readonly partial struct Xoroshiro128pp
             ulong s0 = _s0;
             ulong s1 = _s1;
         NextSeed(ref s0, ref s1);
-        //SaltMaker.SaltXoroshiro128pp(ref s0, ref s1, SaltMaker.ValueToSalty(salt));
+        //Salt(ref s0, ref s1, SaltMaker.ValueToSalty(salt));
         nextSeedPlaceholder = new Xoroshiro128pp(s0, s1);
     }
 
