@@ -10,7 +10,7 @@
     <Configurations>Debug;Release</Configurations>
   </PropertyGroup>
 
-	
+	<!--
 	<ItemGroup>
 		<Compile Include="C:\Projects\TestingAddons\**\*.cs">
 			<AutoGen>true</AutoGen>
@@ -25,6 +25,7 @@
 			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
 		</Compile>
 	</ItemGroup>
+	-->
 	
   <ItemGroup>
     <PackageReference Include="Collections.Pooled" Version="2.0.0-preview.27" />
