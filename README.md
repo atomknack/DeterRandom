@@ -11,9 +11,10 @@ You can find their original at https://prng.di.unimi.it
 
 All operations of random generators are deterministic.
 Benchmarks show, that generators 3-4 times faster than System.Random.
+![Benchmark](https://github.com/atomknack/DeterRandom/blob/main/Benchmark/202303SpeedBench.png?raw=true)
 
 All generators in this library additionally can be:
-1) Reset to state of it creation.
+1) Reset to state of it creation, without need to allocate memory for new generator.
 2) Made from existing one, as copy or independent derivative that will use current state as initial
 3) Salted by ulong value, which will change current state, but leave initial state intact.
 4) Serialized and Deserialized from Json by using Newtonsoft.Json. Json aspect is moved to separate files with corresponding name ending.
